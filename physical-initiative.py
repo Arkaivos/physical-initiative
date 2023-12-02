@@ -69,6 +69,6 @@ if __name__ == '__main__':
     try:
         ser = serial.Serial(SERIAL_PORT, 9600, timeout=1)
     except serial.SerialException as e:
-        print(f"No Arduino detected at {PUERTO_SERIE} port.")
+        print(f"No Arduino detected at {SERIAL_PORT} port.")
         quit()
     run_server()

@@ -16,7 +16,7 @@ This Foundry VTT plugin, Physical Initiative, allows you to control lights conne
 
 1. Connect your Arduino to your computer.
 
-2. Modify the Python server script (physical-initiative.py) to match your Arduino's serial port. Update the `PUERTO_SERIE` constant with the correct port.
+2. Modify the Python server script (physical-initiative.py) to match your Arduino's serial port. Update the `SERIAL_PORT` constant with the correct port.
 
 3. Start the Python server by running the following command in the terminal:
 
