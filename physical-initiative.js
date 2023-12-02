@@ -4,12 +4,20 @@ Hooks.once('init', async function() {
     console.log("Initializing Physical Initiative Module.");
     // Añadimos la configuración de IP al módulo.
     game.settings.register(moduleName,'ipConfig', {
-        name: 'Dirección IP',
+        name: 'IP Address',
+        hint: 'The address of the python server that is connected to the arduino.',
         scope: "world",
         config: true,
         type: String,
         default: "127.0.0.1:5500"
-    });  
+    });
+    game.settings.register(moduleName, 'seatPositions', {
+        name: 'Seat positions (optional)',
+        hint: 'Enter the names of the players separated by commas, in the order they are seated. (If left blank, the player order in Foundry will be used.)',
+        scope: 'world', // Esta configuración estará disponible a nivel mundial.
+        config: true,
+        type: String,
+    });    
 });
 
 Hooks.on("updateCombat", async function(combat, changed, options, userId) {
@@ -31,11 +39,22 @@ Hooks.on("updateCombat", async function(combat, changed, options, userId) {
 
                     // Calculamos la posición del jugador actual en la mesa.
                     let playerIndex = -1;
-                    for (const user of game.users) {
-                        playerIndex++;
-                        if (user.id == player.id)
+                    const playerSeats = game.settings.get(moduleName, "seatPositions")
+                    if (playerSeats === ""){ // Si no hay configuración, se usa el orden de los jugadores en el sistema.
+                        for (const user of game.users) {
+                            playerIndex++;
+                            if (user.id == player.id)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                    else { // Si hay configuración, se usa lo especificado en la configuración.
+                        const values = playerSeats.split(',').map(value => value.trim());
+                        playerIndex = values.indexOf(player.name)+1;
+                        if(playerIndex == 0)
                         {
-                            break;
+                            console.warn(`Player ${playerName} not found in seat position configuration.`);
                         }
                     }
 
