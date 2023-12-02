@@ -1,0 +1,18 @@
+{
+  "title": "Physical Initiative",
+  "description": "Physical initiative tracker that illuminates the player station using the color that the player has selected in Foundry.",
+  "version": "1.0.0",
+  "scripts": [
+    "physical-initiative.js"
+  ],
+  "id": "physical-initiative",
+  "authors": [
+    {
+      "name": "Arkaivos"
+    }
+  ],
+  "compatibility": {
+    "minimum": "10",
+    "verified": "11"
+  }
+}
