@@ -4,16 +4,16 @@ Hooks.once('init', async function() {
     console.log("Initializing Physical Initiative Module.");
     // Añadimos la configuración de IP al módulo.
     game.settings.register(moduleName,'ipConfig', {
-        name: 'IP Address',
-        hint: 'The address of the python server that is connected to the arduino.',
+        name: game.i18n.localize("physical-initiative.settings.ipConfig.name"),
+        hint: game.i18n.localize("physical-initiative.settings.ipConfig.hint"),
         scope: "world",
         config: true,
         type: String,
         default: "127.0.0.1:5500"
     });
     game.settings.register(moduleName, 'seatPositions', {
-        name: 'Seat positions (optional)',
-        hint: 'Enter the names of the players separated by commas, in the order they are seated. (If left blank, the player order in Foundry will be used.)',
+        name: game.i18n.localize("physical-initiative.settings.seatPositions.name"),
+        hint: game.i18n.localize("physical-initiative.settings.seatPositions.hint"),
         scope: 'world', // Esta configuración estará disponible a nivel mundial.
         config: true,
         type: String,
@@ -21,6 +21,7 @@ Hooks.once('init', async function() {
 });
 
 Hooks.on("updateCombat", async function(combat, changed, options, userId) {
+    console.log(game.i18n.localize("physical-initiative.settings.seatPositions.name"))
     const currentTurn = changed.turn;
     const currentCombatant = combat.turns[currentTurn];
 
@@ -54,7 +55,7 @@ Hooks.on("updateCombat", async function(combat, changed, options, userId) {
                         playerIndex = values.indexOf(player.name)+1;
                         if(playerIndex == 0)
                         {
-                            console.warn(`Player ${playerName} not found in seat position configuration.`);
+                            console.warn(game.i18n.format("physical-initiative.messages.playerNotFound", { playerName: playerName }));
                         }
                     }
 

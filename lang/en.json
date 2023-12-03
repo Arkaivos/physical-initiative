@@ -1,0 +1,17 @@
+{
+  "physical-initiative": {
+    "settings": {
+      "ipConfig": {
+        "name": "IP Address",
+        "hint": "The address of the python server that is connected to the arduino."
+      },
+      "seatPositions": {
+        "name": "Seat positions (optional)",
+        "hint": "Enter the names of the players separated by commas, in the order they are seated. (If left blank, the player order in Foundry will be used.)"
+      }
+    },
+    "messages": {
+      "playerNotFound": "Player ${playerName} not found in seat position configuration."
+    }
+  }
+}

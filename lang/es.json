@@ -1,0 +1,17 @@
+{
+  "physical-initiative": {
+    "settings": {
+      "ipConfig": {
+        "name": "Dirección IP",
+        "hint": "La dirección del servidor Python conectado al Arduino."
+      },
+      "seatPositions": {
+        "name": "Posiciones de asientos (opcional)",
+        "hint": "Introduce los nombres de los jugadores separados por comas, en el orden en que están sentados. (Si se deja en blanco, se usará el orden de jugadores en Foundry.)"
+      }
+    },
+    "messages": {
+      "playerNotFound": "Jugador ${playerName} no encontrado en la configuración de posición del asiento."
+    }
+  }
+}

@@ -11,6 +11,18 @@
       "name": "Arkaivos"
     }
   ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    }
+  ],
   "compatibility": {
     "minimum": "10",
     "verified": "11"
