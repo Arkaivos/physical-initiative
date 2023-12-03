@@ -14,7 +14,7 @@ This Foundry VTT plugin, Physical Initiative, allows you to control lights conne
 
 4. Upload the physical-initiative.ino code to your Arduino, and connect it to the led strip.
 
-<img src="https://i.imgur.com/vNws2OY.jpg" title="Arduino schematic" style="width: 55vw; min-width: 330px;"></img>
+<img src="https://i.imgur.com/vNws2OY.jpg" title="Arduino schematic" style="width: 30vw;"></img>
 
 ## Setup
 
