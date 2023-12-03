@@ -2,6 +2,9 @@
 
 This Foundry VTT plugin, Physical Initiative, allows you to control lights connected to an Arduino using a Python server. The lights can be integrated into your tabletop gaming experience to provide a visual representation of initiative order.
 
+![pi_sample](https://github.com/Arkaivos/physical-initiative/assets/22010113/4adcefea-134d-4c28-a2d8-13e9498c28f7)
+
+
 ## Installation
 
 1. Clone or download this repository into the `modules` directory of your Foundry VTT installation.
