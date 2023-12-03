@@ -12,6 +12,10 @@ This Foundry VTT plugin, Physical Initiative, allows you to control lights conne
 
 3. Enable the "Physical Initiative" module in the Foundry VTT setup.
 
+4. Upload the physical-initiative.ino code to your Arduino, and connect it to the led strip.
+
+<img src="https://i.imgur.com/vNws2OY.jpg" title="Arduino schematic"></img>
+
 ## Setup
 
 1. Connect your Arduino to your computer.
@@ -45,6 +49,8 @@ This Foundry VTT plugin, Physical Initiative, allows you to control lights conne
 ## Configuration
 
 - Set the Python server's IP address and port in the Foundry VTT module settings.
+
+- Set the order of the players around the table, separated by commas in the Foundry VTT module settings.
 
 ## Notes
 
