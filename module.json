@@ -28,6 +28,6 @@
     "verified": "11"
   },
   "url": "https://github.com/Arkaivos/physical-initiative",
-  "manifest": "https://github.com/Arkaivos/physical-initiative/blob/main/module.json",
+  "manifest": "https://github.com/Arkaivos/physical-initiative/raw/main/module.json",
   "download": "https://github.com/Arkaivos/physical-initiative/raw/main/physical-initiative.zip"
 }
