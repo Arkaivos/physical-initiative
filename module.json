@@ -27,5 +27,6 @@
     "minimum": "10",
     "verified": "11"
   },
-  "url": "https://github.com/Arkaivos/physical-initiative"
+  "url": "https://github.com/Arkaivos/physical-initiative",
+  "manifest": "https://github.com/Arkaivos/physical-initiative/blob/main/module.json",
 }
