@@ -29,4 +29,5 @@
   },
   "url": "https://github.com/Arkaivos/physical-initiative",
   "manifest": "https://github.com/Arkaivos/physical-initiative/blob/main/module.json",
+  "download": "https://github.com/Arkaivos/physical-initiative/raw/main/physical-initiative.zip",
 }
